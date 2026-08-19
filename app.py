@@ -8,12 +8,17 @@ started only by :func:`main` under the ``python app.py`` entry point.
 from __future__ import annotations
 
 import logging
+import os
+import shutil
 import weakref
 from dataclasses import dataclass
+from pathlib import Path
 from threading import Lock
 from typing import Final
+from uuid import uuid4
 
 from flask import Flask, Request, Response, jsonify, render_template, request
+from werkzeug.datastructures import FileStorage
 from werkzeug.exceptions import RequestEntityTooLarge
 
 from config import load_config
@@ -44,6 +49,11 @@ _UPLOAD_TOO_LARGE_MESSAGE: Final = (
 _INTERNAL_ERROR_MESSAGE: Final = (
     "Não foi possível concluir a operação devido a uma falha interna."
 )
+
+_ALLOWED_ZIP_MIMES: Final = frozenset(
+    {"application/zip", "application/x-zip-compressed"}
+)
+_COPY_BLOCK_SIZE: Final = 64 * 1024
 
 
 @dataclass(frozen=True, slots=True)
@@ -260,6 +270,121 @@ def _register_error_handlers(app: Flask) -> None:
         )
 
 
+def validate_upload_contract(incoming_request: Request) -> FileStorage:
+    """Validate a multipart/form-data upload and return the FileStorage object.
+
+    Checks:
+    - Content-Type is multipart/form-data
+    - Exactly one ``file`` field is present
+    - The filename is non-empty and ends with ``.zip`` (case-insensitive)
+    - The MIME type is ``application/zip`` or ``application/x-zip-compressed``
+    """
+
+    if not incoming_request.content_type or not incoming_request.content_type.startswith(
+        "multipart/form-data"
+    ):
+        raise PublicError(
+            code="unsupported_media_type",
+            message=(
+                "Envie o arquivo com Content-Type multipart/form-data."
+            ),
+            http_status=415,
+        )
+
+    all_files = incoming_request.files.getlist("file")
+    if len(all_files) == 0:
+        raise PublicError(
+            code="file_missing",
+            message="O campo file é obrigatório.",
+            http_status=400,
+        )
+    if len(all_files) > 1:
+        raise PublicError(
+            code="file_ambiguous",
+            message="Envie exatamente um arquivo por requisição.",
+            http_status=400,
+        )
+
+    file_storage = all_files[0]
+    filename = file_storage.filename or ""
+    if not filename:
+        raise PublicError(
+            code="file_name_missing",
+            message="O arquivo enviado não possui nome.",
+            http_status=400,
+        )
+
+    if not filename.lower().endswith(".zip"):
+        raise PublicError(
+            code="unsupported_file_type",
+            message="Somente arquivos .zip são aceitos.",
+            http_status=415,
+        )
+
+    mime = (file_storage.mimetype or "").lower().strip()
+    if mime not in _ALLOWED_ZIP_MIMES:
+        raise PublicError(
+            code="unsupported_media_type",
+            message=(
+                "O MIME type do arquivo deve ser application/zip ou "
+                "application/x-zip-compressed."
+            ),
+            http_status=415,
+        )
+
+    return file_storage
+
+
+def copy_upload_bounded(
+    file_storage: FileStorage,
+    dest_path: Path,
+    max_bytes: int,
+) -> None:
+    """Copy a FileStorage stream to dest_path in 64 KB blocks.
+
+    Raises PublicError ``upload_too_large`` (413) if the stream would exceed
+    ``max_bytes`` without writing the offending byte to disk.
+    """
+
+    written = 0
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    flags |= getattr(os, "O_NOFOLLOW", 0)
+    flags |= getattr(os, "O_BINARY", 0)
+
+    descriptor: int | None = None
+    try:
+        descriptor = os.open(dest_path, flags, 0o600)
+        stream = file_storage.stream
+        while True:
+            block = stream.read(_COPY_BLOCK_SIZE)
+            if not block:
+                break
+            if not isinstance(block, bytes):
+                block = block.encode("utf-8") if isinstance(block, str) else bytes(block)
+            if written + len(block) > max_bytes:
+                raise PublicError(
+                    code="upload_too_large",
+                    message=_UPLOAD_TOO_LARGE_MESSAGE,
+                    http_status=413,
+                )
+            view = memoryview(block)
+            while view:
+                amount = os.write(descriptor, view)
+                if amount <= 0:
+                    raise OSError("short write during upload copy")
+                written += amount
+                view = view[amount:]
+        os.fchmod(descriptor, 0o600)
+        os.close(descriptor)
+        descriptor = None
+    finally:
+        if descriptor is not None:
+            try:
+                os.close(descriptor)
+            except OSError:
+                pass
+
+
 def validate_chat_request(
     incoming_request: Request,
     max_chars: int,
@@ -330,6 +455,41 @@ def register_routes(app: Flask, services: Services) -> None:
     @app.get("/")
     def index() -> tuple[str, int]:
         return render_template("index.html"), 200
+
+    @app.post("/upload")
+    def upload() -> tuple[Response, int]:
+        file_storage = validate_upload_contract(request)
+        upload_id = uuid4()
+        staging_dir = runtime.config.upload_folder / str(upload_id)
+        staging_dir.mkdir(mode=0o700, parents=False, exist_ok=False)
+        try:
+            dest_path = staging_dir / "upload.zip"
+            copy_upload_bounded(
+                file_storage,
+                dest_path,
+                runtime.config.max_upload_bytes,
+            )
+            result = services.ingestion_service.ingest(dest_path, upload_id)
+        finally:
+            try:
+                if staging_dir.exists():
+                    shutil.rmtree(staging_dir)
+            except OSError:
+                _LOGGER.exception(
+                    "Falha ao remover diretório de staging do upload."
+                )
+        return (
+            jsonify(
+                {
+                    "success": True,
+                    "documents": result.documents,
+                    "pages": result.pages,
+                    "chunks": result.chunks,
+                    "warnings": list(result.warnings),
+                }
+            ),
+            200,
+        )
 
     @app.post("/chat")
     def chat() -> tuple[Response, int]:
@@ -446,9 +606,11 @@ __all__ = [
     "ApplicationRuntime",
     "Services",
     "close_app",
+    "copy_upload_bounded",
     "create_app",
     "error_response",
     "main",
     "register_routes",
     "validate_chat_request",
+    "validate_upload_contract",
 ]

@@ -4,10 +4,95 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ERP AI Support</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <main>
+
+  <header class="page-header">
     <h1>ERP AI Support</h1>
+    <p>Assistente de suporte ao ERP</p>
+  </header>
+
+  <main class="page-content">
+
+    <!-- ── Seção de upload ─────────────────────────────────────── -->
+    <section class="panel" aria-label="Importar documentos">
+      <h2>Importar documentos</h2>
+
+      <form id="upload-form" novalidate>
+        <div class="form-group">
+          <label for="upload-file">Arquivo ZIP</label>
+          <input
+            id="upload-file"
+            type="file"
+            accept=".zip,application/zip,application/x-zip-compressed"
+            aria-describedby="upload-status"
+          >
+        </div>
+
+        <button id="upload-btn" type="submit" aria-busy="false">
+          Importar
+        </button>
+      </form>
+
+      <div id="upload-status" class="status-area" hidden aria-live="polite"></div>
+
+      <div id="upload-counters" class="counters" hidden aria-live="polite">
+        <div class="counter-item">
+          <strong id="count-docs">0</strong>
+          documentos
+        </div>
+        <div class="counter-item">
+          <strong id="count-pages">0</strong>
+          páginas
+        </div>
+        <div class="counter-item">
+          <strong id="count-chunks">0</strong>
+          chunks
+        </div>
+      </div>
+
+      <ul id="upload-warnings" class="warnings-list" hidden aria-live="polite"></ul>
+    </section>
+
+    <!-- ── Seção de chat ──────────────────────────────────────── -->
+    <section class="panel" aria-label="Consultar base de conhecimento">
+      <h2>Consultar base de conhecimento</h2>
+
+      <form id="chat-form" novalidate>
+        <div class="form-group">
+          <label for="question-input">Pergunta</label>
+          <textarea
+            id="question-input"
+            name="question"
+            rows="4"
+            placeholder="Digite sua pergunta sobre o ERP…"
+            aria-describedby="answer-area"
+          ></textarea>
+        </div>
+
+        <button id="chat-btn" type="submit" aria-busy="false">
+          Consultar
+        </button>
+      </form>
+
+      <div
+        id="answer-area"
+        class="answer-area"
+        hidden
+        aria-live="polite"
+        role="region"
+        aria-label="Resposta"
+      ></div>
+
+      <div id="sources-area" class="sources-area" hidden>
+        <h3>Fontes</h3>
+        <ul id="sources-list" class="sources-list"></ul>
+      </div>
+    </section>
+
   </main>
+
+  <script src="/static/script.js"></script>
 </body>
 </html>

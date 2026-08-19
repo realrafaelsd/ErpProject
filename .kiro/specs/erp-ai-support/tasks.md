@@ -285,7 +285,7 @@ Este plano implementa o MVP como uma aplicação monolítica Flask em Python 3.1
     - _Arquivos/componentes: `app.py` (rotas `/` e `/chat`, `validate_chat_request`)._
     - _Requirements: 4.1, 15.1–15.17, 21.3, 21.4_
 
-  - [~] 8.3 Implementar o contrato completo de `POST /upload` e cópia limitada
+  - [x] 8.3 Implementar o contrato completo de `POST /upload` e cópia limitada
     - Validar multipart, ocorrência única do campo `file`, ausência de outros arquivos, nome, extensão e MIME na ordem normativa.
     - Criar staging exclusivo, copiar stream em blocos contando bytes sem gravar o byte excedente, chamar `IngestionService` somente após contrato válido e remover toda área em `finally`.
     - Retornar contrato exato de sucesso/contagens/avisos e mapear 400/409/413/415/422/503 com `success=false`, preservando zero alteração em rejeições.
@@ -310,20 +310,20 @@ Este plano implementa o MVP como uma aplicação monolítica Flask em Python 3.1
     - **Validates: Requirements 15.16, 16.13, 18.8, 18.10**
     - _Arquivos/componentes: `tests/properties/test_property_19_public_errors.py`._
 
-- [ ] 9. Implementar a interface web segura e responsiva
-  - [~] 9.1 Criar a estrutura HTML acessível da interface
+- [x] 9. Implementar a interface web segura e responsiva
+  - [x] 9.1 Criar a estrutura HTML acessível da interface
     - Criar título/subtítulo, formulário de pergunta, áreas separadas de resposta/fontes, área de base, seletor `.zip`, importação, status, avisos e contadores nomeados com labels e regiões `aria-live`.
     - Não incorporar conteúdo documental no template nem usar framework frontend.
     - _Arquivos/componentes: `templates/index.html`._
     - _Requirements: 2.2, 2.12, 4.2–4.6, 17.14, 21.1, 22.2_
 
-  - [~] 9.2 Implementar o layout CSS sem overflow em 1280 px
+  - [x] 9.2 Implementar o layout CSS sem overflow em 1280 px
     - Criar container/grid responsivo com `box-sizing`, `minmax(0, 1fr)`, controles limitados ao viewport, quebra segura de texto e `white-space: pre-wrap` para respostas.
     - Garantir ausência de sobreposição, corte/rolagem horizontal e manter estados disabled/status visualmente identificáveis.
     - _Arquivos/componentes: `static/style.css`._
     - _Requirements: 2.12, 4.7, 17.1, 17.2, 17.7, 17.8, 17.16_
 
-  - [~] 9.3 Implementar chat e upload com JavaScript puro e renderização literal
+  - [x] 9.3 Implementar chat e upload com JavaScript puro e renderização literal
     - Implementar flags independentes, `fetch()` para ambas as rotas, estados `Consultando...`, `Processando...` e `Concluído`, desabilitação/reabilitação em `finally` e bloqueio de submit duplicado.
     - Validar schemas de sucesso/erro, preservar pergunta/arquivo em falhas, atualizar/limpar fontes, avisos e contadores e tratar falha de rede/corpo incompatível.
     - Inserir todo valor não confiável somente por `textContent`/`createTextNode`, nunca `innerHTML`, mantendo quebras de linha visuais.
@@ -336,8 +336,8 @@ Este plano implementa o MVP como uma aplicação monolítica Flask em Python 3.1
     - _Arquivos/componentes: `tests/frontend/test_ui_contract.py`, `tests/frontend/test_ui_browser.py`._
     - _Requirements: 4.2–4.7, 17.1–17.19, 18.9_
 
-- [ ] 10. Completar documentação e verificações dos artefatos de entrega
-  - [~] 10.1 Escrever o guia de operação completo do MVP
+- [x] 10. Completar documentação e verificações dos artefatos de entrega
+  - [x] 10.1 Escrever o guia de operação completo do MVP
     - Criar `README.md` com pré-requisitos, venv/instalação, Ollama/modelos locais, preparação offline do embedding, `.env`, todas as variáveis/regras, estrutura, execução, uso, privacidade, limitações e troubleshooting acionável.
     - Incluir fluxo inicial com ZIP de exatamente dois PDFs, pergunta coberta, resultados esperados e procedimento final numerado com comandos exatos; documentar que obtenção inicial pode usar internet, mas a operação não.
     - Documentar a garantia de processo único e a estratégia atômica efetivamente implementada sem expor detalhes desnecessários ao usuário.
