@@ -1,0 +1,777 @@
+{
+  "pbtResults": {
+    "4.5 Escrever property test de consistência vetorial": {
+      "status": "passed",
+      "lastRunTimestamp": 1787092363059
+    },
+    "2.4 Escrever property test dos limites ZIP declarados": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093308877
+    },
+    "2.5 Escrever property test dos limites reais de extração": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093319852
+    },
+    "3.8 Escrever property test da identidade de chunk": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093719724
+    },
+    "3.6 Escrever property test da identidade do documento": {
+      "status": "passed",
+      "lastRunTimestamp": 1787095495340
+    },
+    "3.7 Escrever property test da fidelidade do spool": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093741244
+    },
+    "3.9 Escrever property test dos invariantes de chunking": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093817645
+    },
+    "3.5 Escrever property test de descoberta e nomes seguros": {
+      "status": "passed",
+      "lastRunTimestamp": 1787093831548
+    },
+    "5.4 Escrever property test de contagens e avisos": {
+      "status": "passed",
+      "lastRunTimestamp": 1787094532555
+    },
+    "5.3 Escrever property test de idempotência da ingestão": {
+      "status": "passed",
+      "lastRunTimestamp": 1787094549046
+    },
+    "5.5 Escrever property test de atomicidade do estado": {
+      "status": "passed",
+      "lastRunTimestamp": 1787094549463
+    },
+    "7.8 Escrever property test da convergência para insuficiência": {
+      "status": "passed",
+      "lastRunTimestamp": 1787096855478
+    },
+    "7.6 Escrever property test do curto-circuito de contexto vazio": {
+      "status": "passed",
+      "lastRunTimestamp": 1787096859187
+    },
+    "7.7 Escrever property test da separação do prompt": {
+      "status": "passed",
+      "lastRunTimestamp": 1787096879800
+    },
+    "7.5 Escrever property test de cardinalidade e limiar da recuperação": {
+      "status": "passed",
+      "lastRunTimestamp": 1787096896052
+    },
+    "7.9 Escrever property test da proveniência de fontes": {
+      "status": "passed",
+      "lastRunTimestamp": 1787097757714
+    }
+  },
+  "executionHistory": {
+    "1.1 Criar os manifestos e a estrutura local executável": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022003458
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022022914
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022516434
+      }
+    ],
+    "1.2 Implementar os contratos de domínio e os erros públicos": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022003784
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022035609
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022525315
+      }
+    ],
+    "1.3 Implementar o gerenciador de configuração centralizado e validado": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022004057
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022543633
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787046774239
+      }
+    ],
+    "1.4 Criar o exemplo completo de ambiente": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022004208
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022042309
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022530994
+      }
+    ],
+    "2.1 Implementar inspeção integral, plano seguro e extração limitada do ZIP": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022004443
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787046788172
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787049431494
+      }
+    ],
+    "3.1 Implementar descoberta ordenada, nomes exibíveis e avisos": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022004639
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787068768887
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787087631203
+      }
+    ],
+    "3.2 Implementar extração página a página com PyMuPDF e spool fiel": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022004854
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787087651236
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787089056188
+      }
+    ],
+    "3.3 Implementar identidades determinísticas e chunking rastreável": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022005079
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787089136149
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787090313878
+      }
+    ],
+    "4.1 Implementar o serviço local de embeddings": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022005297
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787046796142
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787049435814
+      }
+    ],
+    "4.2 Implementar manifesto SQLite, locks e journal de recuperação": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022005518
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787068774933
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787087637760
+      }
+    ],
+    "4.3 Implementar o adaptador Chroma persistente com atomicidade observável": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022005771
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787087660139
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787089108254
+      }
+    ],
+    "5.1 Implementar `IngestionService` do ZIP ao commit confirmado": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022005911
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092459033
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092957805
+      }
+    ],
+    "6. Checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022006054
+      }
+    ],
+    "7.1 Implementar recuperação semântica determinística": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022006319
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094675221
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094897458
+      }
+    ],
+    "7.2 Implementar prompt seguro, validação conservadora e fontes": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022006588
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787095149982
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787095554281
+      }
+    ],
+    "7.3 Implementar cliente Ollama local e `RAGService`": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022006792
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787095579389
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096006306
+      }
+    ],
+    "8.1 Implementar composição, ciclo de vida e tratamento uniforme de erros": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022006918
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096021695
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096625041
+      }
+    ],
+    "8.2 Implementar `GET /` e o contrato completo de `POST /chat`": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007032
+      },
+      {
+        "executionId": "c524c826-56e3-41fb-8205-75946a7547b9",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097837564
+      }
+    ],
+    "8.3 Implementar o contrato completo de `POST /upload` e cópia limitada": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007205
+      }
+    ],
+    "9.1 Criar a estrutura HTML acessível da interface": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007305
+      }
+    ],
+    "9.2 Implementar o layout CSS sem overflow em 1280 px": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007438
+      }
+    ],
+    "9.3 Implementar chat e upload com JavaScript puro e renderização literal": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007574
+      }
+    ],
+    "10.1 Escrever o guia de operação completo do MVP": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007710
+      }
+    ],
+    "12. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787022007839
+      }
+    ],
+    "1. Estabelecer a fundação do projeto, os contratos e a configuração central": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787046774358
+      }
+    ],
+    "2. Implementar validação e extração segura de arquivos ZIP": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787049431642
+      }
+    ],
+    "1.5 Escrever testes unitários de domínio e configuração": [
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787049476204
+      },
+      {
+        "executionId": "01e3a461-d9bc-4cb2-82ba-c58de1056f3a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787049537390
+      }
+    ],
+    "4. Implementar embeddings locais, manifesto e armazenamento vetorial": [
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787089108395
+      }
+    ],
+    "3. Implementar descoberta de PDFs, extração textual, identidade e chunking": [
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787090313961
+      }
+    ],
+    "4.4 Escrever testes unitários de embeddings, manifesto e compatibilidade": [
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787090346617
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787091589685
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787091824435
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092196232
+      }
+    ],
+    "4.5 Escrever property test de consistência vetorial": [
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787090353286
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787091599004
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092201210
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092431451
+      }
+    ],
+    "4.6 Escrever integração do Chroma pinado, round trip e capacidade transacional": [
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787090363776
+      },
+      {
+        "executionId": "8c96bdfd-3f9b-4b54-bfce-a33a8e682af5",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787091647758
+      }
+    ],
+    "5. Integrar a transação completa de ingestão": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787092958012
+      }
+    ],
+    "2.2 Escrever testes unitários e de integração do ZIP e filesystem": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093017437
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093408535
+      }
+    ],
+    "2.3 Escrever property test do plano ZIP seguro": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093021234
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093431497
+      }
+    ],
+    "2.4 Escrever property test dos limites ZIP declarados": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093032527
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093418206
+      }
+    ],
+    "2.5 Escrever property test dos limites reais de extração": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093039166
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093423377
+      }
+    ],
+    "3.4 Escrever testes unitários e de integração de PDF, spool, avisos e chunking": [
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093044029
+      },
+      {
+        "executionId": "f0aecd9c-5aaf-4114-8b86-76ea8360e05a",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093426790
+      }
+    ],
+    "3.5 Escrever property test de descoberta e nomes seguros": [
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093584855
+      },
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093982983
+      }
+    ],
+    "3.6 Escrever property test da identidade do documento": [
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093591977
+      },
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094002011
+      }
+    ],
+    "3.7 Escrever property test da fidelidade do spool": [
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093601265
+      },
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093986851
+      }
+    ],
+    "3.8 Escrever property test da identidade de chunk": [
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093608803
+      },
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093991555
+      }
+    ],
+    "3.9 Escrever property test dos invariantes de chunking": [
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093613894
+      },
+      {
+        "executionId": "2ab1cfb3-ef1f-412c-b91f-b20822b5e99c",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787093996903
+      }
+    ],
+    "5.2 Escrever testes unitários da orquestração de ingestão": [
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094111295
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094641467
+      }
+    ],
+    "5.3 Escrever property test de idempotência da ingestão": [
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094122521
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094646491
+      }
+    ],
+    "5.4 Escrever property test de contagens e avisos": [
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094129852
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094650892
+      }
+    ],
+    "5.5 Escrever property test de atomicidade do estado": [
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094143416
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094657829
+      }
+    ],
+    "5.6 Escrever integrações de falha, recovery e concorrência da ingestão": [
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094149568
+      },
+      {
+        "executionId": "7f941c49-6f79-429a-b81d-bb2413440d81",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787094663409
+      }
+    ],
+    "7. Implementar recuperação, prompt fundamentado, Ollama e composição RAG": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096006710
+      }
+    ],
+    "7.4 Escrever testes unitários de recuperação, prompt, geração e RAG": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096643476
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097015392
+      }
+    ],
+    "7.5 Escrever property test de cardinalidade e limiar da recuperação": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096652317
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097018101
+      }
+    ],
+    "7.6 Escrever property test do curto-circuito de contexto vazio": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096658187
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097022701
+      }
+    ],
+    "7.7 Escrever property test da separação do prompt": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096665955
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097026497
+      }
+    ],
+    "7.8 Escrever property test da convergência para insuficiência": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787096673961
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097028648
+      }
+    ],
+    "7.9 Escrever property test da proveniência de fontes": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097058383
+      },
+      {
+        "executionId": "c524c826-56e3-41fb-8205-75946a7547b9",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097829843
+      }
+    ],
+    "7.10 Escrever integração do cliente Ollama com servidor fake local": [
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097063046
+      },
+      {
+        "executionId": "33243e3d-addc-4340-86bb-dcbb8ebbc8a1",
+        "chatSessionId": "sess_9a1a8561-8514-42d3-af1e-98d1ed03262c",
+        "timestamp": 1787097506186
+      }
+    ]
+  }
+}

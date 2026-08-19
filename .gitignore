@@ -1,0 +1,38 @@
+# Python bytecode and test/tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime logs and temporary files
+*.log
+*.pid
+*.tmp
+
+# Locally downloaded model artifacts and caches
+.cache/
+models/
+data/models/
+
+# Uploaded archives and temporary extraction data
+documents/uploads/*
+!documents/uploads/.gitkeep
+
+# Local ChromaDB data, manifest, journal, and lock
+data/chroma/*
+!data/chroma/.gitkeep

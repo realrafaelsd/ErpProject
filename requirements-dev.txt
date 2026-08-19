@@ -1,0 +1,7 @@
+# Development and local test dependencies for Python >=3.11,<4
+-r requirements.txt
+
+hypothesis==6.165.10
+playwright==1.62.0
+pytest==9.1.1
+pytest-playwright==0.9.0

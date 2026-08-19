@@ -1,0 +1,1 @@
+## Desenvolvimento de solução de **IA** para suporte técnico de **ERP**, utilizando RAG para transformar centenas de manuais técnicos em uma base de conhecimento consultável por linguagem natural, reduzindo a necessidade de busca manual em documentação e fornecendo respostas fundamentadas com indicação das fontes utilizadas.
